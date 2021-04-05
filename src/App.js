@@ -1,24 +1,44 @@
-import logo from './logo.svg';
-import './App.css';
+import Navbar from './Navbar';
+import Home from './pages/Home';
+import NotFound from './NotFound';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import About from './pages/About';
+import Projects from './pages/Projects';
+import Contact from './pages/Contact';
+import BlogHome from './pages/blog/BlogHome';
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div className="App">
+        <Navbar />
+        <div className="content">
+        <div className="bg-decor"></div>
+        <h1 id="main-border">Hi! My name is Sylvia.</h1>
+          <Switch>   
+            <Route exact path="/">
+              <Home align={"main top"}/>
+            </Route>
+            <Route exact path="/about">
+              <About align={"main middle"} />
+            </Route>
+            <Route exact path="/projects">
+              <Projects align={"main middle"}/>
+            </Route>
+            <Route exact path="/contact">
+              <Contact align={"main bottom"}/>
+            </Route>
+            <Route exact path="/blog">
+              <BlogHome align={"main middle"}/>
+            </Route>
+            <Route path="*">
+              <NotFound align={"main middle"}/>
+            </Route>
+          </Switch>
+        </div> 
+      </div>
+    </Router>
   );
 }
 
