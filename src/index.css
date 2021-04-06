@@ -95,6 +95,7 @@ body {
   align-items: center;
   padding-right: 2em;
 }
+
 .logo {
   height: 30px;
 }
@@ -205,9 +206,31 @@ body {
     color: inherit;
     font-size: inherit;
   }
-
   a:hover, active {
       color: #62E36F;
       text-decoration: underline;
   }
+}
+
+/*Page content*/
+.section-header {
+  margin: 2em;
+  background-color: #62E36F;
+}
+.section-header p {
+  font-size: 1em;
+}
+.section-body {
+  text-align: left;
+}
+.section-body h3 {
+  margin-top: 2em;
+}
+.section-body p {
+  margin: 1em;
+  font-size: .7em;
+}
+.page-end {
+  width: 3em;
+  margin-top: 3em;
 }
