@@ -3,7 +3,7 @@ import { MenuToggle } from "./navbar/MenuToggle";
 import { useState } from 'react';
 import { useMediaQuery } from "react-responsive";
 import { DeviceSize } from "./navbar/Responsive";
-import logo from "./img/SDLogo.png";
+import logo from "./img/SDLogo.svg";
 
 const Navbar = () => {
     const [isOpen, setOpen] = useState(false);
@@ -15,7 +15,7 @@ const Navbar = () => {
     return ( 
         <nav className="navbar">
             {isMobile && <div className="navbar-menu">
-                <Link to="/" onClick={handleClick}><img src={ logo } className="logo"/></Link>
+                <Link to="/" onClick={handleClick}><img src={ logo } className="logo" alt="logo"/></Link>
                 <MenuToggle isOpen={isOpen} toggle={() => setOpen(!isOpen)}/>
             </div>}
             {isOpen && 
@@ -29,7 +29,7 @@ const Navbar = () => {
             }
             {!isMobile && <div className="fullNavbar">
                 <div className="left-section">
-                    <Link to="/"><img src={ logo } className="logo"/></Link>
+                    <Link to="/"><img src={ logo } className="logo" alt="logo"/></Link>
                 </div>
                 <div className="middle-section">
                     <Link to="/about" className="nav-item">About</Link>
