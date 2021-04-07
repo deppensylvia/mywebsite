@@ -1,8 +1,9 @@
 import cube from '../img/SDCube.gif';
 
-const About = () => {
+const About = ({align}) => {
+
     return ( 
-        <div className="main middle">
+        <div className={align}>
             <div className="section-header">
                 <h2>About</h2>
                 <p>A bit about me</p>

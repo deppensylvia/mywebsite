@@ -1,13 +1,13 @@
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import { MenuToggle } from "./navbar/MenuToggle";
 import { useState } from 'react';
 import { useMediaQuery } from "react-responsive";
-import { DeviceSize } from "./navbar/Responsive";
 import logo from "./img/SDLogo.svg";
 
 const Navbar = () => {
+    const linkUrls = { about:'/about', projects:'/projects', contact:'/contact', blogs:'/blogs'}
     const [isOpen, setOpen] = useState(false);
-    const isMobile = useMediaQuery({ maxWidth: DeviceSize.mobile});
+    const isMobile = useMediaQuery({ maxWidth: 1114});
     const handleClick = () => {
         setOpen(false);
     }
@@ -15,27 +15,27 @@ const Navbar = () => {
     return ( 
         <nav className="navbar">
             {isMobile && <div className="navbar-menu">
-                <Link to="/" onClick={handleClick}><img src={ logo } className="logo" alt="logo"/></Link>
+                <NavLink to="/" onClick={handleClick}><img src={ logo } className="logo" alt="logo"/></NavLink>
                 <MenuToggle isOpen={isOpen} toggle={() => setOpen(!isOpen)}/>
             </div>}
             {isOpen && 
                 <div className = "mobileNavbar">
-                    <Link to="/about" className="nav-item" onClick={handleClick}>About</Link>
-                    <Link to="/projects" className="nav-item" onClick={handleClick}>Projects</Link>
-                    <Link to="/contact" className="nav-item" onClick={handleClick}>Contact</Link>
-                    <Link to="/blog" className="nav-item" onClick={handleClick}>Blog</Link>
+                    <NavLink to={ linkUrls.about } className="nav-item" onClick={handleClick}>About</NavLink>
+                    <NavLink to={ linkUrls.projects } className="nav-item" onClick={handleClick}>Projects</NavLink>
+                    <NavLink to={ linkUrls.contact }className="nav-item" onClick={handleClick}>Contact</NavLink>
+                    <NavLink to={ linkUrls.blogs } className="nav-item" onClick={handleClick}>Blog</NavLink>
                     <button id="subscribe" className="nav-item" onClick={handleClick}>Subscribe</button>
                 </div>
             }
             {!isMobile && <div className="fullNavbar">
                 <div className="left-section">
-                    <Link to="/"><img src={ logo } className="logo" alt="logo"/></Link>
+                    <NavLink to="/"><img src={ logo } className="logo" alt="logo"/></NavLink>
                 </div>
                 <div className="middle-section">
-                    <Link to="/about" className="nav-item">About</Link>
-                    <Link to="/projects" className="nav-item">Projects</Link>
-                    <Link to="/contact" className="nav-item">Contact</Link>
-                    <Link to="/blog" className="nav-item">Blog</Link>
+                    <NavLink to={ linkUrls.about } className="nav-item">About</NavLink>
+                    <NavLink to={ linkUrls.projects } className="nav-item">Projects</NavLink>
+                    <NavLink to={ linkUrls.contact } className="nav-item">Contact</NavLink>
+                    <NavLink to={ linkUrls.blogs } className="nav-item">Blog</NavLink>
                 </div>
                 <div className="right-section">
                     <button id="subscribe" className="nav-item">Subscribe</button>

@@ -1,8 +1,17 @@
-const Contact = (props) => {
-    const align = props.align;
+import cube from '../img/SDCube.gif';
+import Form from './form/Form.js';
+
+const Contact = ({align}) => {
     return ( 
         <div className={align}>
-            <h2>Contact</h2>
+            <div className="section-header">
+                <h2>Contact</h2>
+                <p>Ways to reach me</p>
+            </div>
+            <div className="section-body">
+                <Form />
+            </div>
+            <img src={ cube } className="page-end" alt=""/>
         </div>
      );
 }

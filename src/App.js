@@ -6,6 +6,7 @@ import About from './pages/About';
 import Projects from './pages/Projects';
 import Contact from './pages/Contact';
 import BlogHome from './pages/blog/BlogHome';
+import BlogDetails from './pages/blog/BlogDetails';
 
 
 function App() {
@@ -15,9 +16,9 @@ function App() {
         <Navbar />
         <div className="content">
         <div className="bg-decor"></div>
-        <h1 id="main-border">Hi! My name is Sylvia.</h1>
           <Switch>   
             <Route exact path="/">
+              <h1 id="main-border">Hi! My name is Sylvia.</h1>
               <Home align={"main top"}/>
             </Route>
             <Route exact path="/about">
@@ -29,8 +30,11 @@ function App() {
             <Route exact path="/contact">
               <Contact align={"main bottom"}/>
             </Route>
-            <Route exact path="/blog">
+            <Route exact path="/blogs">
               <BlogHome align={"main middle"}/>
+            </Route>
+            <Route path="/blogs/:id"> 
+              <BlogDetails align={"main middle"}/>
             </Route>
             <Route path="*">
               <NotFound align={"main middle"}/>
