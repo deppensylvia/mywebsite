@@ -1,8 +1,14 @@
-# Getting Started with Create React App
+# About this website
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project was created for me to showcase myself as well as for practice using React.js. 
 
-## Available Scripts
+## Node and react scripts versions used:
+I'm going to update this as I remember. I'm definitnely new to good documentation technique in web dev, so forgive me for now...
+
+
+
+## It was created using Node and create-react-app, therefore you can use the following commands.
+Although I personally used npm commands, I figured I'd keep the default information given by create-react-app.
 
 In the project directory, you can run:
 
