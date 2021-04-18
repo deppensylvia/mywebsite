@@ -388,6 +388,9 @@ h2.home-iam {
   height: 9em;
   align-self: center;
 }
+.gif-text {
+  font-size: .5em;
+}
 .home-hover-group {
   margin: 0;
   padding: 0;

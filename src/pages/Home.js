@@ -1,9 +1,5 @@
 import { NavLink } from 'react-router-dom';
 import { useState } from 'react';
-import testp from '../img/testblue.png';
-import testu from '../img/testred.png';
-import testb from '../img/testgreen.png';
-import testl from '../img/testorange.png';
 
 const Home = ({align}) => {
 
@@ -17,10 +13,10 @@ const Home = ({align}) => {
         <div className={align}>
             <div className="home-top">
                 {!isShownP && !isShownU && !isShownB && !isShownL && (<h2 className="home-iam">I am a...</h2>)}
-                {isShownP && (<img src={testp} alt="" className="home-img-change"/>)}
-                {isShownU && (<img src={testu} alt="" className="home-img-change"/>)}
-                {isShownB && (<img src={testb} alt="" className="home-img-change"/>)}
-                {isShownL && (<img src={testl} alt="" className="home-img-change"/>)}
+                {isShownP && (<><img className="home-img-change" src="https://media.giphy.com/media/3oKIPnAiaMCws8nOsE/giphy.gif" alt="cat typing on keyboard"/><p className="gif-text">Gif by <a href="https://www.reddit.com/r/CatGifs/comments/640py3/meet_the_new_it_guy_xpost_raww/?st=j180my0k&sh=2230295e">u/rawling on Reddit</a></p></>)}
+                {isShownU && (<><img className="home-img-change" src="https://media.giphy.com/media/QYpWZt7HfbQTci37H5/giphy.gif" alt=""/><p className="gif-text">Gif by <a href="https://media.giphy.com/media/QYpWZt7HfbQTci37H5/giphy.gif">Patrick Hosmer</a></p></>)}
+                {isShownB && (<><img className="home-img-change" src="https://media.giphy.com/media/qnlIw1jKhQhZnim1n0/giphy.gif" alt=""/><p className="gif-text" >Gif by <a href="https://kochstrasse.agency/gif-marketing/">Kochstrasse™.agency</a></p></>)}
+                {isShownL && (<><img className="home-img-change" src="https://media.giphy.com/media/VIKOfvqJHcVDrdVivT/giphy.gif" alt=""/><p className="gif-text">Gif by <a href="https://giphy.com/channel/emmelinedraws">Emmelinedraws</a></p></>)}
             </div>
             <div className="home-hover-group">
                 <div className="home-hover" 
