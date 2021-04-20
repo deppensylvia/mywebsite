@@ -44,7 +44,6 @@ body {
   flex-direction: column;
   align-items: center;
   padding: 0;
-  width: 100%;
 }
 #main-border {
   grid-area: 3 / 2 / span 1 / span 3;
@@ -172,7 +171,7 @@ body {
     display: flex;
     flex: 2;
     height: 100%;
-    justify-content: center;
+    justify-content: flex-end; /*change back to center when ready to add blog and subscribe*/
     margin: 0;
     padding: 0;
   }
@@ -214,7 +213,7 @@ body {
 
 /*Page content*/
 .section-header {
-  margin: 2em;
+  margin: 2em 0em;
   background-color: #62E36F;
   width: 100%;
 }
@@ -247,9 +246,9 @@ body {
 }
 .section-image-box {
   position: center;
-  width: 20rem;
-  height: 20rem;
-  object-fit:cover;
+  width: calc(50vw + .5*5vw);
+  height: calc(50vw + .5*5vw);
+  object-fit: cover;
   margin-top: 1em;
 }
 p.img-caption {
@@ -294,11 +293,6 @@ p.img-caption {
 
 
 /*Forms*/
-@media all and (max-width: 1114px){
-  .inputItem input, textarea {
-    width: 100%;
-  }
-}
 #contactMe {
   display: flex;
   flex-flow: column wrap;
@@ -321,8 +315,11 @@ p.img-caption {
   color: #000;
   border-radius: 10px;
   border: none;
-  font-size: 24px;
+  font-size: 1em;
   padding: 1em;
+  width: 100%;
+  font-family: 'IBM Plex Mono', monospace;
+
 }
 .inputItem input {
   height: 3rem;
@@ -330,15 +327,11 @@ p.img-caption {
 .inputItem textarea {
   height: 15rem;
 }
-.inputItem input, textarea {
-  font-family: 'IBM Plex Mono', monospace;
-  /* width: 60%; */
-}
 .buttonPair {
   margin: 0.5rem;
   display: flex;
   align-self: center;
-  flex-wrap: wrap;
+  flex-wrap: wrap-reverse;
 }
 .buttonPair button {
   background-color: #533A71;

@@ -23,8 +23,8 @@ const Navbar = () => {
                     <NavLink to={ linkUrls.about } className="nav-item" onClick={handleClick}>About</NavLink>
                     <NavLink to={ linkUrls.projects } className="nav-item" onClick={handleClick}>Projects</NavLink>
                     <NavLink to={ linkUrls.contact }className="nav-item" onClick={handleClick}>Contact</NavLink>
-                    <NavLink to={ linkUrls.blogs } className="nav-item" onClick={handleClick}>Blog</NavLink>
-                    <button id="subscribe" className="nav-item" onClick={handleClick}>Subscribe</button>
+                    {/* <NavLink to={ linkUrls.blogs } className="nav-item" onClick={handleClick}>Blog</NavLink>
+                    <button id="subscribe" className="nav-item" onClick={handleClick}>Subscribe</button> */}
                 </div>
             }
             {!isMobile && <div className="fullNavbar">
@@ -35,11 +35,11 @@ const Navbar = () => {
                     <NavLink to={ linkUrls.about } className="nav-item">About</NavLink>
                     <NavLink to={ linkUrls.projects } className="nav-item">Projects</NavLink>
                     <NavLink to={ linkUrls.contact } className="nav-item">Contact</NavLink>
-                    <NavLink to={ linkUrls.blogs } className="nav-item">Blog</NavLink>
+                    {/* <NavLink to={ linkUrls.blogs } className="nav-item">Blog</NavLink> */}
                 </div>
-                <div className="right-section">
+                {/* <div className="right-section">
                     <button id="subscribe" className="nav-item">Subscribe</button>
-                </div>
+                </div> */}
             </div>
             }
         </nav>
