@@ -1,5 +1,5 @@
 import cube from '../img/SDCube.gif';
-import Form from './form/Form.js';
+import ContactForm from './form/ContactForm';
 
 const Contact = ({align}) => {
     return ( 
@@ -9,7 +9,7 @@ const Contact = ({align}) => {
                 <p>Ways to reach me</p>
             </div>
             <div className="section-body">
-                <Form />
+                <ContactForm />
             </div>
             <img src={ cube } className="page-end" alt=""/>
         </div>
