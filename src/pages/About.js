@@ -1,4 +1,4 @@
-import cube from '../img/SDCube.gif';
+import TopButton from '../components/TopButton';
 
 const About = ({align}) => {
 
@@ -47,7 +47,7 @@ const About = ({align}) => {
                 My main belief is that as long as I keep an open-mind and open-heart, life will always be exciting and worthwhile.
                 </p>
             </div>
-            <img src={ cube } className="page-end" alt=""/>
+            <TopButton />
         </div>
      );
 }

@@ -1,6 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&family=Press+Start+2P&display=swap');
 
 /*basic styling*/
+html {
+  scroll-behavior: smooth;
+}
 * {
   margin: 0;
   padding: 0;
@@ -9,6 +12,9 @@
 body {
   width: 100vw;
   height: 100vh;
+}
+ol {
+  padding: 1em 4em;
 }
 .App {
   min-width: 360px;
@@ -293,33 +299,33 @@ p.img-caption {
 
 
 /*Forms*/
-#contactMe {
+#fmContactMe {
   display: flex;
-  flex-flow: column wrap;
-  justify-content: flex-end;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
 }
-#contactMe h3 {
+#fmContactMe h3 {
   align-self: center;
 }
-#contactMe .contactWrapper {
+.contactWrapper {
   width: 100%;
+  display: flex;
+  flex-flow: column;
+  align-items: flex-start;
 }
 .inputItem {
   margin: 0.5rem;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
 }
 .inputItem input, textarea {
   background-color: #BAB1BE;
   color: #000;
   border-radius: 10px;
   border: none;
-  font-size: 1em;
+  font-size: .8em;
   padding: 1em;
   width: 100%;
-  font-family: 'IBM Plex Mono', monospace;
-
+  font-family: 'IBM Plex Mono', monospace; 
 }
 .inputItem input {
   height: 3rem;
@@ -329,8 +335,8 @@ p.img-caption {
 }
 .buttonPair {
   margin: 0.5rem;
+  align-content: center;
   display: flex;
-  align-self: center;
   flex-wrap: wrap-reverse;
 }
 .buttonPair button {
@@ -345,6 +351,7 @@ p.img-caption {
   justify-content: center;
   align-items: center;
   margin: 3px;
+  font-family: 'IBM Plex Mono', monospace; 
 }
 .buttonPair .clear {
   background-color: #C70A65;
@@ -442,4 +449,48 @@ a {
 .arrow-hover:hover {
   display: inline;
   position: relative;
+}
+
+/*Popup*/
+ button.popup {
+  background-color: crimson;
+  color: white;
+  border: 0;
+  padding: 6px 10px;
+  margin: 20px auto;
+}
+.popup-wrapper{
+  background: rgba(0,0,0,0.5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+  z-index: 10;
+}
+
+.popup{
+  font-family: arial;
+  text-align: center;
+  width: 100%;
+  max-width: 300px;
+  margin: 10% auto;
+  padding: 20px;
+  background: white;
+  position: relative;
+}
+
+.popup a{
+  background: crimson;
+  color: white;
+  text-decoration: none;
+  padding: 6px 10px;
+}
+
+.popup-close{
+  position: absolute;
+  top: 5px;
+  right: 8px;
+  cursor: pointer;
 }

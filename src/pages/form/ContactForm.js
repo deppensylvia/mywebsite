@@ -1,4 +1,6 @@
 import React, {Component} from "react";
+// add https://www.npmjs.com/package/react-google-recaptcha-v3
+// https://developers.google.com/recaptcha/docs/v3
 
 class ContactForm extends Component {
     constructor(props) {
@@ -44,6 +46,7 @@ class ContactForm extends Component {
       return (
         <form id="fmContactMe" onSubmit={this.handleSubmit}>
           <h3>Send Me a Message</h3><br/>
+          <h4><strong><center>***This form is under construction and is currently not functional***</center></strong></h4>
           <div id="contactWrapper">
             <div className="inputItem">
               <label htmlFor="contactFirstName">First Name: </label>
