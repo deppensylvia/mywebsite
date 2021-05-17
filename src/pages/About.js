@@ -1,4 +1,5 @@
 import TopButton from '../components/TopButton';
+import MyFace from '../img/MyFaceVector.png';
 
 const About = ({align}) => {
 
@@ -9,42 +10,67 @@ const About = ({align}) => {
                 <p>A bit about me</p>
             </div>
             <div className="section-body">
-                <h3>Programming:</h3>
+                <img id="myface" src={MyFace} alt="my profile"/>
                 <p>
-                    The first time I was exposed to programming, I was about 5 years old. I learned really basic HTML and CSS and made one of those very 90’s websites, with gifs of hamsters, bright flashing colors, and the ever so adorable, Amy Castle’s “The Cuppycake Song” that played in the background forever. 
+                    I am an <strong>aspiring software engineer</strong>. While I am in a way switching career paths, 
+                    I’m actually returning to one of my first career interests after taking a long detour 
+                    to explore various career paths and learn about myself. 
                 </p>
                 <p>
-                    After a brief pause, I continued learning programming in my middle school’s magnet programming for math, science, and computer science. We learned the basics starting in scratch, then moving on to true BASIC, and some more html and css. In high school, I joined my school’s Academy of Information Technology (AOIT) program and learned C++ (functional programming), Java (Object-oriented programming, data structures, design patterns, and algorithmic thinking) and UNIX/Linux operating systems (command-line, scripts in Bash and Perl). In college I took a few classes and additionally learned C, PHP, JS, SQL, Apache Spark and Hadoop. And finally, after college, I took a few data science machine learning classes with UCSD extension. 
+                    <strong>I’ve always been multidisciplinary</strong>. I was very fortunate to be able to pursue many 
+                    passions growing up, therefore I did them each with all my heart. I played soccer 
+                    and ran track, I performed in orchestras on violin and double bass, I made drawings 
+                    and wrote poetry and did all sorts of other arts and crafts as a hobby, and of course, 
+                    school was my top priority. Through doing all these activities at the level I did, 
+                    <strong>I gained many skills that I could apply to the rest of my life</strong>. For example, 
+                    in music, I learned to listen carefully and how persistence and practice get results. 
+                    In sports, I learned teamwork, leadership, and how to push through mental and physical limits and 
+                    keep going. I especially learned how often the things we are most resistant towards 
+                    are the things that will help us grow the most if we make it through the discomfort. 
+                    In art, I learned introspection and meditation. And lastly, through my education, I 
+                    learned how to be critical and analytical. But, it wasn’t until I started learning 
+                    programming that I learned about my passion. 
                 </p>
                 <p>
-                    While I’ve taken many classes and did well in them, I did not apply my knowledge as much as I wanted, since I primarily was working in research labs (biology and psychology and used my programming knowledge for analysis on data sets. These days I am learning more about software design and am working on creating web and mobile applications. My goal is to be proficient in quickly building and launching MVP applications for internal business use, therefore my current focus in learning front-end web design. That being said, I am also studying backend development, but I have more experience in backend and therefore am working on being more well-rounded. 
-                </p>
-            </div>
-            <div className="section-body">
-                <h3>User Experience:</h3>
-                <p>
-                    I first learned about UX when I was working in my first job as a data analyst. I was talking to a friend about their career path, and they told me that was what they were doing. At the time I was considering going into graphic design, however after I looked into UX, it seemed like the perfect combination of integrating design, research, coding, and human-centered business-thinking. If I am being honest, I never had a great perspective on businesses before, so learning that there was a profession dedicated to creating products actually based on real needs of real people, I was sold. 
-                </p>
-                <p>
-                I got involved in San Diego’s UX community and met incredible, wonderful people with all different levels of experience. I attended many meet-ups and activities in the community, took several online classes to learn UX fundamentals, and read numerous books and articles on various aspects of UX, including information architecture, research, interviewing, accessibility, and strategy. Learning about UX opened my mind up to all new possibilities when it came to businesses. Through my journey in UX, I got a job at a non-profit that taught programming to kids, in which I was going to help use my newfound knowledge to improve the organization.
-                </p>
-            </div>
-            <div className="section-body">
-                <h3>Business Strategy:</h3>
-                <p>
-                    My interest in business really started when I got a part-time job working in an ice cream and candy cafe in the mall nearby my apartment (while I was job searching). I was older than most of the other workers, so I was given some more responsibilities. I was able to learn more about how the business was run and managing the shop. When I got a job as a data analyst, I also spent some time to understand more about how the company was run, both departmentally and organizationally. 
+                    <strong>Programming has been a part of my life for as long as I can remember</strong>. My path to programming 
+                     started when I was young. My dad is an engineer, so he exposed me to tech as soon as he could. 
+                     Then, I attended a middle school for math, science, and computer science where I learned 
+                     the basics through scratch, TrueBASIC, and HTML/CSS. I continued studying programming in 
+                     high school in my school’s <a rel="noreferrer" target="_blank" href="http://woottonaoit.org/">AOIT program</a>, 
+                     learning C++, Java (AP and advanced topics), and Linux/UNIX with Montgomery College. Then in college, 
+                     I took my school’s <a rel="noreferrer" target="_blank" href="http://cs50.tv/2013/fall/#lectures">CS50 class</a> in 
+                     the advanced section due to my experience. 
                 </p>
                 <p>
-                However, the main reason I decided to get an MBA was due to working at a non-profit. I worked directly under the Executive Director and had access to the majority of the organization’s accounts and data. I spent a lot of time understanding the overall structure and processes of the organization in order to find ways to simplify and improve where I could. In the process, I realized my limitations and wanted to learn more to bridge the gaps in my knowledge. It was at that point I applied to and got into my MBA program. Throughout my program, I was able to apply what I was learning to my work and also help advise my boss. I ended up primarily focusing on informational strategy, researching and planning ways to implement a new customer management system and restructuring our backend databases. Although I am no longer working there, my interest in creating efficient businesses has only increased.
+                    However, I was also a recruited athlete for track and field, and majoring in CS 
+                    unfortunately conflicted too much. Therefore <strong>I had to pivot</strong>. As a result, 
+                    I decided to major in neurobiology. I felt like it tied together programming 
+                    and psychology (another field I’m passionate about) perfectly. However, I also 
+                    learned in my later years of college, that working research was not for me. 
+                    I wanted to be less on the side of producing research and more on the side of 
+                    making research accessible to the world. This took me down the path of <strong>exploring 
+                    various fields like data science, UX, and business</strong>. As someone who has always 
+                    been multidisciplinary, these fields appealed to me because they are general 
+                    enough to be applied to anything, but involve looking at the whole context 
+                    and then taking complex information and parsing them down to get better results.
                 </p>
-            </div>
-            <div className="section-body">
-                <h3>Lifelong Learning:</h3>
                 <p>
-                    I love learning. In addition to my education, I grew up balancing art, music, and sports. As a result, I grew passionate about learning in general.
+                    And while I’ve found these fields invaluable to learn about, within each 
+                    of my experiences, <strong>I was always drawn to programming</strong>. Whether it’s been 
+                    writing scripts to streamline my work, working with other programmers to 
+                    troubleshoot problems, or even working at a school that teaches programming 
+                    to kids, <strong>I’ve kept coding close to my heart</strong>. But now, I’m ready to pursue it 
+                    full-time and use the experience I’ve gained along the way as a guide. And as 
+                    I’ve had the time to refresh myself on the fundamentals and get caught up on 
+                    all the new technologies that came out since I last studied CS, 
+                    I’ve been loving every day!
                 </p>
                 <p>
-                My main belief is that as long as I keep an open-mind and open-heart, life will always be exciting and worthwhile.
+                    And finally, while my path hasn’t been the most straightforward, 
+                    <strong> I hope I can help inspire others who are also multidisciplinary</strong> 
+                    to prove that we don’t have to sacrifice our desire to explore and 
+                    learn in multiple fields to be successful. After all, our value comes 
+                    in how we work, rather than what we work on. 
                 </p>
             </div>
             <TopButton />

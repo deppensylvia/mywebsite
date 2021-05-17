@@ -16,6 +16,13 @@ body {
 ol {
   padding: 1em 4em;
 }
+p, ol {
+  color: #333;
+}
+strong {
+  font-weight: bolder;
+  color: #000;
+}
 .App {
   min-width: 360px;
   width: 100%;
@@ -141,7 +148,13 @@ ol {
   align-items: center;
   margin: 1em;
 }
-#subscribe {
+.sm-nav {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+}
+/* #subscribe {
   border: 0;
   outline: 0;
   padding: 8px 1em;
@@ -162,7 +175,7 @@ ol {
 }
 #subscribe:focus {
     border: 1px solid #62E36F;
-}
+} */
 
 /*Navbar tablet and desktop styling*/
 @media all and (min-width: 1114px){
@@ -177,12 +190,13 @@ ol {
     display: flex;
     flex: 2;
     height: 100%;
-    justify-content: flex-end; /*change back to center when ready to add blog and subscribe*/
+    justify-content: center;
     margin: 0;
     padding: 0;
   }
   .right-section {
     display: flex;
+    justify-content: flex-end;
   }
   .fullNavbar {
     position: fixed;
@@ -231,12 +245,13 @@ ol {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: flex-start;
 }
 .section-body h3 {
   margin-top: 2em;
-  align-self: flex-start;
+  align-self: center;
 }
-.section-body p {
+.section-body p, ol {
   margin: 1em;
   font-size: .7em;
 }
@@ -252,8 +267,10 @@ ol {
 }
 .section-image-box {
   position: center;
-  width: calc(50vw + .5*5vw);
-  height: calc(50vw + .5*5vw);
+  /* width: calc(50vw + .5*5vw);
+  height: calc(50vw + .5*5vw); */
+  width: 300px;
+  height: 300px;
   object-fit: cover;
   margin-top: 1em;
 }
@@ -299,7 +316,7 @@ p.img-caption {
 
 
 /*Forms*/
-#fmContactMe {
+/* #fmContactMe {
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
@@ -361,7 +378,7 @@ p.img-caption {
 }
 .buttonPair button:hover {
   background-color: #62C4DA;
-}
+} */
 
 /*Home page*/
 .home-top {
@@ -451,46 +468,6 @@ a {
   position: relative;
 }
 
-/*Popup*/
- button.popup {
-  background-color: crimson;
-  color: white;
-  border: 0;
-  padding: 6px 10px;
-  margin: 20px auto;
-}
-.popup-wrapper{
-  background: rgba(0,0,0,0.5);
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  display: none;
-  z-index: 10;
-}
-
-.popup{
-  font-family: arial;
-  text-align: center;
-  width: 100%;
-  max-width: 300px;
-  margin: 10% auto;
-  padding: 20px;
-  background: white;
-  position: relative;
-}
-
-.popup a{
-  background: crimson;
-  color: white;
-  text-decoration: none;
-  padding: 6px 10px;
-}
-
-.popup-close{
-  position: absolute;
-  top: 5px;
-  right: 8px;
-  cursor: pointer;
+#myface {
+  width: 200px;
 }

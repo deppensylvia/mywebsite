@@ -4,9 +4,6 @@ import NotFound from './NotFound';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import About from './pages/About';
 import Projects from './pages/Projects';
-import Contact from './pages/Contact';
-import BlogHome from './pages/blog/BlogHome';
-import BlogDetails from './pages/blog/BlogDetails';
 
 function App() {
   return (
@@ -25,15 +22,6 @@ function App() {
             </Route>
             <Route exact path="/projects">
               <Projects align={"main middle"}/>
-            </Route>
-            <Route exact path="/contact">
-              <Contact align={"main bottom"}/>
-            </Route>
-            <Route exact path="/blogs">
-              <BlogHome align={"main middle"}/>
-            </Route>
-            <Route path="/blogs/:id"> 
-              <BlogDetails align={"main middle"}/>
             </Route>
             <Route path="*">
               <NotFound align={"main middle"}/>
