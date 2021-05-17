@@ -2,16 +2,17 @@ import meAtWork from '../img/meboard.jpeg';
 import TopButton from '../components/TopButton';
 
 const Projects = ({align}) => {
-    const projectLink = document.querySelectorAll(".projectLink");
-
-    projectLink.forEach(project => {
-        project.addEventListener('click', e => {
-            console.log('clicked');
-        });
-    });
-
-
     
+    const setSectionVisability = e => {
+        const sectionVis = e.target.getAttribute("href");
+        const sectionsAll = document.querySelectorAll(".section-body");
+        sectionsAll.forEach(section => {
+            section.style.display="none";
+            console.log(section);
+        });
+        const thisSection = document.querySelector(sectionVis);
+        thisSection.style.display="flex";
+    }
 
     return ( 
         
@@ -24,15 +25,15 @@ const Projects = ({align}) => {
                 <div className="center-left-align">
                     <h3>Table of Contents</h3>
                     <h4>Programming Projects</h4>
-                    <p><a href="#website" className="projectLink">&gt;sylviadeppen.com</a></p>
-                    <p><a href="#jobhunt" className="projectLink">&gt;Job Application Tracker App</a></p>
+                    <p><a onClick={setSectionVisability} href="#website" className="projectLink">&gt;sylviadeppen.com</a></p>
+                    <p><a onClick={setSectionVisability} href="#jobhunt" className="projectLink">&gt;Job Hunt Tracker App</a></p>
                     <h4>Business Strategy</h4>
-                    <p><a href="#volunteer" className="projectLink">&gt;Volunteer Program</a></p>
-                    <p><a href="#tlp" className="projectLink">&gt;TLP Quality Assurance</a></p>
+                    <p><a onClick={setSectionVisability} href="#volunteer" className="projectLink">&gt;Volunteer Program</a></p>
+                    <p><a onClick={setSectionVisability} href="#tlp" className="projectLink">&gt;TLP Quality Assurance</a></p>
                 </div>
             </div>
             <div className="section-body" id="website">
-                <h3>This Website!</h3>
+                <h3>sylviadeppen.com AKA This Website</h3>
                 <h5>Background and Purpose:</h5>
                 <p>
                     I really wanted to make my own website from scratch. I love designing things and although I'm no graphic designer,
@@ -82,7 +83,7 @@ const Projects = ({align}) => {
                     projects as I go along. 
                 </p>
             </div>
-            <div className="section-body" id="jobhunt">
+            <div className="section-body" id="jobhunt" style={{display: "none"}}>
                 <h3>Job Hunt Tracker</h3>
                 <h5>Background and Purpose:</h5>
                 <p>
@@ -105,7 +106,7 @@ const Projects = ({align}) => {
                 <p>
                     It is still a work in progress, but I will update this section when I've complete this project.
                 </p>
-                <h5>Challenges</h5>
+                <h5>Challenges:</h5>
                 <p>
                     Although I'm not done, one of the major challenges I've faced so far with this project has been deciding 
                     the best way to develop my project. As someone learning new ways of coding every day, I sometimes get 
@@ -115,7 +116,8 @@ const Projects = ({align}) => {
                 </p>
                 {/* <h5>Takeaways</h5>
                 <p></p> */}
-            <div className="section-body" id="volunteer">
+            </div>
+            <div className="section-body" id="volunteer" style={{display: "none"}}>
                 <h3>Volunteer Program</h3>
                 <p>
                     When I worked at The LEAGUE of Amazing Programmers, I came in with the intent on 
@@ -199,7 +201,7 @@ const Projects = ({align}) => {
                     focus on the volunteers next time. 
                 </p>
             </div>
-            <div className="section-body" id="tlp">
+            <div className="section-body" id="tlp" style={{display: "none"}}>
                 <h3>TLP Quality Assurance</h3>
                 <p>
                     When I worked at Thermo Fisher Scientific as a contractor, I was assigned to work on the quality 
@@ -241,7 +243,7 @@ const Projects = ({align}) => {
                     Essentially, as I was learning the QA process, I was also keeping track of frequent issues that popped up, and then when I did 
                     create my code, I made sure to add checks in those areas to prevent pain and headaches in the future.
                 </p>
-                <h5>Results</h5>
+                <h5>Results:</h5>
                 <p>
                     After I had mostly finished streamlining the QA process, I made sure to create a comprehensive guide, since I knew I would 
                     not be in that position forever. In addition to the guide, I created a training protocol to teach others not only the process,
@@ -249,21 +251,20 @@ const Projects = ({align}) => {
                     over the span of four days to one person over the span of a day and a half, enabling my team to spend more time on other work.
                     The process also increased the quality of the data overall.
                 </p>
-                <h5>Challenges</h5>
+                <h5>Challenges:</h5>
                 <p>
                     The biggest challenges I had were probably when I was troubleshooting XML upload issues. Those steps had the highest stakes
                     in that doing them wrong would lead to complex issues, like, sending hundreds of leads to the wrong people and having to 
                     contact every individual involved to inform them of what was going on. This was also a huge challenge when it came to 
                     training other people. I got quite good at quickly figure out what went wrong and correct the issues before they got out of control.
                 </p>
-                <h5>Takeaways</h5>
+                <h5>Takeaways:</h5>
                 <p>
                     Doing QA was definitely challenging and frustrating, but streamlining it was one the most rewarding projects I've done. 
                     I'm grateful I was able to take on the task because it gave the the opportunity to dive in deep into the inner workings
                     of the process my team worked on, and also learn how much I love streamlining complex problems.
                 </p>
             </div>
-        </div>
             <TopButton />
         </div>
      );
